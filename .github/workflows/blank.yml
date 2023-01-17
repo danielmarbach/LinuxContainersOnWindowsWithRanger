@@ -28,4 +28,6 @@ jobs:
       - name: Run a one-line script
         run: | 
           choco install rancher-desktop
+          nerdctl run -d -p 8000:80 nginx
+          curl http://localhost:8000/
 
